@@ -1,0 +1,10 @@
+{
+  "uuid": "%uuid%",
+  "name": "AutoBanner",
+  "mainClass": "de.lvl.nyrval.LvlAddonMain",
+  "description": "AutoBan befreit dein Casino von Altaccounts",
+  "version": 1.3,
+  "author": "NyRvAl",
+  "category": 1,
+  "icon": "https://icons.iconarchive.com/icons/chrisl21/minecraft/512/Tnt-icon.png"
+}

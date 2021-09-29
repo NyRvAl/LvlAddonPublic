@@ -1,0 +1,16 @@
+{
+  "config": {
+    "nearScanner": false,
+    "SPIELEROP": "NyRvAl",
+    "MYSTERYMOD": false,
+    "Message": "Du wurdest vom Gs augeschlossen",
+    "bannPremium": true,
+    "enabledBannPlayers": true,
+    "präfix": ".",
+    "playersSend": "Fuxi05,1Blxckie",
+    "shouldplayersSend": false,
+    "webhook": "https://discordapp.com/api/webhooks/892059479624011857/hR7TP6-MfebpKpCtVpiQzLS5xXqdRLeUIZSOCGOFzaLwmc5gP6wLpfvGZfM3CX0tuc31",
+    "onlyPrefixBann": true,
+    "plotid": "-177;110"
+  }
+}

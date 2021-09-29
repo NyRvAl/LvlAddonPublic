@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+plugins {
+    id'java'
+    id'application'
+    id'com.github.johnrengelman.shadow' version '4.0.0'
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+
+mainClassName = "LvlAddonMain"
+version = "1.3.0"
+group = "de.lvl.nyrval"
+archivesBaseName = "LvlAddon"
+
+sourceCompatibility = targetCompatibility = '1.8'
+
+
+minecraft {
+    version = "1.12.2-14.23.0.2512"
+    runDir = "run"
+    mappings = "snapshot_20171003"
+}
+
+configurations {
+    shade
+    compile.extendsFrom shade
+}
+
+dependencies {
+
+    shade('com.googlecode.json-simple:json-simple:1.1.1'){ exclude group: 'org.hamcrest', module: 'hamcrest-core' }
+    shade('com.javax0.license3j:license3j:3.1.5')
+
+}
+runClient {
+    jvmArgs("-Dfml.coreMods.load=net.labymod.core.asm.LabyModCoreMod -DdebugMode=true -Daddonresources=addon.json")
+    classpath += sourceSets.main.runtimeClasspath
+}
+
+
+
+
+
+
+
+
+
+
+jar {
+    configurations.shade.each { dep ->
+        from(project.zipTree(dep)){
+            exclude 'META-INF', 'META-INF/**','LICENSE.txt'
+
+        }
+    }
+}
+
+
+reobf {
+    jar {
+        setMappingType(net.minecraftforge.gradle.user.ReobfMappingType.NOTCH)
+    }
+}
+
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+    options.encoding = 'UTF-8'
+
+}

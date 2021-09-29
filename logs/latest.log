@@ -1,0 +1,9 @@
+[00:00:02] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[00:00:02] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[00:00:02] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[00:00:03] [Thread-5/INFO]: OpenAL initialized.
+[00:00:03] [Sound Library Loader/INFO]: Sound engine started
+[00:00:07] [main/INFO]: Created: 512x512 textures-atlas
+[00:00:11] [main/WARN]: Skipping bad option: lastServer:
+[00:00:11] [main/INFO]: Narrator library for x64 successfully loaded
+[00:00:26] [main/INFO]: Connecting to bungee1.griefergames.net., 25565
