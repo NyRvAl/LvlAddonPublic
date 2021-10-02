@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 mainClassName = "LvlAddonMain"
-version = "1.3.0"
+version = "1.0.0"
 group = "de.lvl.nyrval"
 archivesBaseName = "LvlAddon"
 

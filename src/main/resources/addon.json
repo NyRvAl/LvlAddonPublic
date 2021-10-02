@@ -1,10 +1,10 @@
 {
   "uuid": "%uuid%",
-  "name": "AutoBanner",
+  "name": "LevelUP",
   "mainClass": "de.lvl.nyrval.LvlAddonMain",
-  "description": "AutoBan befreit dein Casino von Altaccounts",
-  "version": 1.3,
+  "description": "LevelUP zeigt dir die Leveln deiner Items an",
+  "version": 1.0,
   "author": "NyRvAl",
   "category": 1,
-  "icon": "https://icons.iconarchive.com/icons/chrisl21/minecraft/512/Tnt-icon.png"
+  "icon": "https://cdn.discordapp.com/attachments/582112094535811082/893050485387444274/anvil.png"
 }
