@@ -30,38 +30,8 @@ minecraft {
     mappings = "snapshot_20171003"
 }
 
-configurations {
-    shade
-    compile.extendsFrom shade
-}
-
 dependencies {
 
-    shade('com.googlecode.json-simple:json-simple:1.1.1'){ exclude group: 'org.hamcrest', module: 'hamcrest-core' }
-    shade('com.javax0.license3j:license3j:3.1.5')
-
-}
-runClient {
-    jvmArgs("-Dfml.coreMods.load=net.labymod.core.asm.LabyModCoreMod -DdebugMode=true -Daddonresources=addon.json")
-    classpath += sourceSets.main.runtimeClasspath
-}
-
-
-
-
-
-
-
-
-
-
-jar {
-    configurations.shade.each { dep ->
-        from(project.zipTree(dep)){
-            exclude 'META-INF', 'META-INF/**','LICENSE.txt'
-
-        }
-    }
 }
 
 

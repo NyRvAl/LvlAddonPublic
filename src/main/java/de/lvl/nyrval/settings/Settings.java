@@ -16,11 +16,11 @@ public class Settings {
         INSTANCE = this;
         this.config = config;
     }
-    public void setAddonon(boolean On){
+    public void setAddonOn(boolean On){
         config.addProperty(ADDONON,On);
 
     }
-    public Boolean isAddonon(){
+    public Boolean isAddonOn(){
         return config.has(ADDONON)?config.get(ADDONON).getAsBoolean():false;
     }
 }

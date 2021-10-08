@@ -5,7 +5,7 @@ Time: 9/29/21 8:26 PM
 Description: Initializing game
 
 java.lang.NullPointerException: Initializing game
-	at de.lvl.nyrval.events.MyTickEvent.onTickEvent(MyTickEvent.java:20)
+	at de.lvl.nyrval.events.MyToolTipEvent.onTickEvent(MyTickEvent.java:20)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_27_MyTickEvent_onTickEvent_GuiOpenEvent.invoke(.dynamic)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
 	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:179)
@@ -33,7 +33,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Client thread
 Stacktrace:
-	at de.lvl.nyrval.events.MyTickEvent.onTickEvent(MyTickEvent.java:20)
+	at de.lvl.nyrval.events.MyToolTipEvent.onTickEvent(MyTickEvent.java:20)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_27_MyTickEvent_onTickEvent_GuiOpenEvent.invoke(.dynamic)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
 	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:179)

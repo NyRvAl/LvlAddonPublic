@@ -2,7 +2,7 @@
   "uuid": "%uuid%",
   "name": "LevelUP",
   "mainClass": "de.lvl.nyrval.LvlAddonMain",
-  "description": "LevelUP zeigt dir die Leveln deiner Items an",
+  "description": "LevelAddon zeigt dir die Leveln deiner Items an",
   "version": 1.0,
   "author": "NyRvAl",
   "category": 1,

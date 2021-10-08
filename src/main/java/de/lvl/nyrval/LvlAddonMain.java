@@ -1,22 +1,18 @@
 package de.lvl.nyrval;
 
 import de.lvl.nyrval.events.GrieferGamesServerJoinEvent;
-import de.lvl.nyrval.events.MyTickEvent;
+import de.lvl.nyrval.events.MyToolTipEvent;
 import de.lvl.nyrval.events.ServerLeaveEvent;
-import de.lvl.nyrval.license.CheckLicense;
 import de.lvl.nyrval.settings.Settings;
 import de.lvl.nyrval.settings.SettingsElements;
 import net.labymod.api.LabyModAddon;
-import net.labymod.main.LabyMod;
 import net.labymod.settings.elements.SettingsElement;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.List;
 
 public class LvlAddonMain extends LabyModAddon {
     private static LvlAddonMain INSTANCE;
-    private static CheckLicense checkLicenseINSTANCE;
     private static boolean onServer =false;
 
     public static boolean isOnServer() {
@@ -27,9 +23,6 @@ public class LvlAddonMain extends LabyModAddon {
         LvlAddonMain.onServer = onServer;
     }
 
-    public static CheckLicense getCheckLicenseINSTANCE() {
-        return checkLicenseINSTANCE;
-    }
 
     public static LvlAddonMain getINSTANCE() {
         return INSTANCE;
@@ -39,13 +32,10 @@ public class LvlAddonMain extends LabyModAddon {
     @Override
     public void onEnable() {
         INSTANCE = this;
-        checkLicenseINSTANCE = new CheckLicense();
-        checkLicenseINSTANCE.isOkay();
-        this.getApi().registerForgeListener(new MyTickEvent());
-        if (checkLicenseINSTANCE.isPremium()) {
+
+        this.getApi().registerForgeListener(new MyToolTipEvent());
             this.getApi().getEventManager().registerOnJoin(new GrieferGamesServerJoinEvent());
             this.getApi().getEventManager().registerOnQuit(new ServerLeaveEvent());
-        }
     }
 
     @Override
@@ -55,11 +45,11 @@ public class LvlAddonMain extends LabyModAddon {
 
     @Override
     protected void fillSettings(List<SettingsElement> list) {
-        SettingsElements settingsElements = new SettingsElements();
         try {
-            settingsElements.setElements(list);
-        } catch (IOException | ParseException e) {
+            new SettingsElements().setElements(list);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

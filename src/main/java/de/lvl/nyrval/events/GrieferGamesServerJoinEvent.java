@@ -1,7 +1,6 @@
 package de.lvl.nyrval.events;
 
 import de.lvl.nyrval.LvlAddonMain;
-import de.lvl.nyrval.license.CheckLicense;
 import de.lvl.nyrval.settings.Settings;
 import net.labymod.main.LabyMod;
 import net.labymod.utils.Consumer;
@@ -16,7 +15,7 @@ public class GrieferGamesServerJoinEvent implements Consumer<ServerData> {
     public void accept(ServerData serverData) {
         Matcher matcher = ggPattern.matcher(serverData.getIp().toLowerCase());
         if (matcher.find()){
-            LabyMod.getInstance().displayMessageInChat("§4§l[§e§lLevelAddon Version "+ LvlAddonMain.getCheckLicenseINSTANCE().getVersion() +"§4§l]§b§l ist derzeit "+ (Settings.getINSTANCE().isAddonon()?"aktiviert":"deaktiviert")+".");
+            LabyMod.getInstance().displayMessageInChat("§4§l[§e§lLevelAddon§4§l]§b§l ist derzeit "+ (Settings.getINSTANCE().isAddonOn()?"aktiviert":"deaktiviert")+".");
         LvlAddonMain.setOnServer(true);
         }
     }
